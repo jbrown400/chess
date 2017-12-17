@@ -5,10 +5,11 @@ class King():
 
 
     """ Initialization """
-    def __init__(self, color, location):
+    def __init__(self, color, location, owner):
         self.color = color
         self.location = location
-        self.symbol = ("\u2654" if self.color == "black" else "\u265a")
+        self.symbol = ("\u265a" if self.color == "black" else "\u2654")
+        self.owner = owner
 
 
     """ Move King """

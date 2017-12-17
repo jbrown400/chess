@@ -9,8 +9,8 @@ from game import Game
 
 """ Starting inits """
 board = board.Board()
-playerW = player.Player()
-playerB = player.Player()
+playerW = player.Player("white")
+playerB = player.Player("black")
 game = Game({"white": playerW, "black": playerB}, board)
 
 """ Starting output """

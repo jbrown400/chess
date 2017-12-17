@@ -5,10 +5,11 @@ from pieces.king import King
 
 class Player():
 
-    def __init__(self):
+    def __init__(self, color):
         self.my_turn = False
         self.in_check = False
         self.lost = False
+        self.color = color
         self.pieces = []
         self.init_pieces()
 
@@ -16,10 +17,13 @@ class Player():
     def move(self, piece, location):
         pass
 
-    """ Add a piece to the player's collection """
+    """ 
+        Add a piece to the player's collection
+        Takes a string value to tell which type of piece to generate.
+    """
     def generate_piece(piece):
         pass
 
     """ Initialize pieces for the start of the game """
     def init_pieces(self):
-        self.pieces.append(King("black", "a5"))
+        self.pieces.append(King(self.color, "e8" if self.color == "black" else "e1", self))

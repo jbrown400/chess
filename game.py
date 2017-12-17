@@ -7,4 +7,5 @@ class Game():
         self.board = board
 
     def turn(self):
-        self.board.print_board(self.players["white"], self.players["black"])
+        # self.board.print_board(self.players["white"], self.players["black"])
+        self.board.print_board(self.players)
