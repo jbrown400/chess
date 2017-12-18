@@ -15,4 +15,6 @@ game = Game({"white": playerW, "black": playerB}, board)
 
 """ Starting output """
 print("Let's play chess! \n White goes first")
+while(playerW.lost != False or playerB.lost != False):
+    playerW.lost = True
 game.turn()
