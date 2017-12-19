@@ -21,8 +21,12 @@ class Player():
         Add a piece to the player's collection
         Takes a string value to tell which type of piece to generate.
     """
-    def generate_piece(piece):
+    def generate_piece(self, piece):
         pass
+
+    def print_pieces(self):
+        for piece in self.pieces:
+            print(piece.name + ": " + piece.location)
 
     """ Initialize pieces for the start of the game """
     def init_pieces(self):

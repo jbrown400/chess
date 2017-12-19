@@ -10,6 +10,7 @@ class King():
         self.location = location
         self.symbol = ("\u265a" if self.color == "black" else "\u2654")
         self.owner = owner
+        self.name = "King"
 
 
     """ Move King """

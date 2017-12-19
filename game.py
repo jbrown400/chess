@@ -12,26 +12,32 @@ class Game():
         self.board = board
 
     def turn(self):
-        # self.board.print_board(self.players["white"], self.players["black"])
-        
         # Loop until someone loses
         while(self.players["white"].lost != True or self.players["black"].lost != True):
             self.board.print_board(self.players)
-            
             # Get user input from the white player
+            print("White pieces:\n------")
+            self.players["white"].print_pieces()
             print("White move: ", end="")
             self.white_move = self.validate_input()
-            print(self.white_move)
-            # while(not self.validate_input(input("White move: "))):
-            #    pass
 
             if(self.players["white"].lost == True):
                 continue
 
+            self.board.print_board(self.players)
             # Get user input from the black player
+            print("Black pieces:\n------")
+            self.players["black"].print_pieces()
             print("Black move: ", end="")
             self.black_move = self.validate_input()
-            print(self.black_move)
+
+            if(self.players["black"].lost == True):
+                continue
+
+        if(self.players["white"].lost == False):
+            print("White wins!")
+        else:
+            print("Black wins!")
 
     def validate_input(self):
         while(True):
