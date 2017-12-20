@@ -34,6 +34,7 @@ class Game():
             if(self.players["black"].lost == True):
                 continue
 
+        # Display who has won and who has lost
         if(self.players["white"].lost == False):
             print("White wins!")
         else:
