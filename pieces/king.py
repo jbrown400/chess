@@ -1,5 +1,6 @@
 """ Functionality for the King piece """
 
+import pygame
 
 class King():
 
@@ -8,7 +9,10 @@ class King():
     def __init__(self, color, location, owner):
         self.color = color
         self.location = location
-        self.symbol = ("\u265a" if self.color == "black" else "\u2654")
+        if(color == "white"):
+            self.image = pygame.image.load("images/white_king.png")
+        else:
+            self.image = pygame.image.load("images/black_king.png")
         self.owner = owner
         self.name = "King"
 
