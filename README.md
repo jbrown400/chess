@@ -5,5 +5,5 @@ If you do not have it already, install brew and then run setup.sh to install the
 
 Dependencies:
 * Python 3
-* Pygame (python3 -m pip install pygame --user)
-* SDL2 (brew install sdl2)
+* Pygame
+* SDL2
